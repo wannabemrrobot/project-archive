@@ -1,0 +1,14 @@
+.title{
+    margin: 30px;
+    text-align: center;
+}
+
+.form-container{
+    padding-right: 170px;
+    padding-left: 170px;
+}
+
+.button{
+    background-color: rgb(13, 128, 156);
+    color: white;
+}

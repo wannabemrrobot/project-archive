@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+</head>
+<body>
+    <div class="container jsutify-content-center">
+        <form [formGroup]="bookFormData" (ngSubmit)="validate()" class="form-container">
+            <div class="title">
+                <h3>Add Book</h3>
+            </div>
+            <div class="form-group row">
+                <input type="text" formControlName="bookTitle" name="bookTitle" id="bookTitle" placeholder="Book Title" class="form-control">
+            </div>
+            <div class="form-group row">
+                <input type="text" formControlName="bookAuthor" name="bookAuthor" id="bookAuthor" placeholder="Author Name" class="form-control">
+            </div>
+            <div class="form-group row">
+                <input type="text" formControlName="bookPrice" name="bookPrice" id="bookPrice" placeholder="Price" class="form-control">
+            </div>
+            <div class="form-group row">
+                <select name="bookCategory" formControlName="bookCategory" id="bookCategory" class="form-control">
+                    <option value="Science">Science</option>
+                    <option value="Math">Math</option>
+                    <option value="Computers">Computers</option>
+                    <option value="Cooking">Cooking</option>
+                    <option value="Business">Business</option>
+                </select>
+            </div>
+            <div class="form-group row">
+                <input type="submit" class="button btn col-md-12" value="Save" name="Save" [disabled]="!bookFormData.valid">
+            </div> 
+            
+            <div class="alert alert-success" *ngIf="bookAddStatus">
+                <span>Book Added SuccessFully! &nbsp;&nbsp;&nbsp;</span>
+                <span>
+                    <a [routerLink]="['/BookList']">Show</a>
+                </span>
+            </div>
+            <div class="alert alert-danger" *ngIf="!bookFormData.valid">
+                <span>Form data is null/invalid. Give Valid Inputs.&nbsp;&nbsp;&nbsp;</span>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+.header{
+    background-color: white;
+    height: 130px;
+}
+
+.nav{
+    background-color: rgb(130, 212, 236);
+}
+
+.header-icon{
+    margin-left: 190px;
+    margin-top: 27px;
+    width: 65px;
+    float: left;
+}
+
+.header-title{
+    float: left;
+    margin-left: 35px;
+    margin-top: 37px;
+    font-weight: 600;
+}

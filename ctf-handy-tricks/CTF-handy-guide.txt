@@ -1,0 +1,129 @@
+----------WGET DOWNLOAD
+> use wget to get the file.
+> copy the downloadable file's link address and execute,
+    (wget “link”)
+    
+----------EOG IMAGE VIEWER
+> execute,
+    (eog image.pg)
+> to view an image from CLI.
+
+----------IF THE IMAGE DOES'NT OPEN
+> use file command to see about the file type
+    (file filename)
+> now you can rename the file to get the image viewed.
+
+----------COPY ANYTHING TO CLIPBOARD ON THE CMDLINE
+> pipe anything that you want to copy to xclip and it will
+we copied.
+    (cat flag.txt | xclip -selection clipboard)
+    
+----------- CREAE ALIASES FOR EASY CLI OPERATIONS
+> Create new alias for any commands by
+    (alias alias_name='original command')
+    
+-----------GET DECIMAL EQUIVALENT OF ANY HEXA, OCTA,
+BIN IN PYTHON
+> Fire up python and enter the code
+> eg:
+    0x45 and it returns the decimal equivalent.
+    
+----------MAKE REQUEST TO THE WEBPAGE AND ALLOWS 
+US TO VIEW THE OUTPUT IN CLI.
+> execute,
+    (curl “link” (give  '-s'  for silent))
+    
+-----------WILDCARDS FOR GREP
+> use of wildcards in grep will help us to get more efficient results.
+   ( | grep -oE {.*})
+    
+-----------IDENTIFYING BASE64 USING THE LENGTH
+> Base64 encoded characters are in lengths usually in multiples 
+of 4 and probably ends with ‘=’ sign.
+
+-----------DECODING BASE64 IN THE CLI
+> Linux has a preinstalled program called ‘base64’ which decodes 
+the base64 characters and strings.
+    (base64 -d <<< “string”  or   echo “string” | base64 -d  or   
+    “string”.decode("base64"))
+    
+------------"tr" COMMAND IS USED FOR TRANSLATING THE CHARACTERS
+> To translate a character in command line, use,
+    (echo  “linux is awesome”  |  tr “[a-z]” “[A-Z]”)
+    op: LINUX IS AWESOME
+> Perform ROT13 in command line.
+    (echo "yvahk vf njrfbzr" | tr "[a-zA-Z]" "[n-za-mN-ZA-M]")
+> Get output in a single line.
+    pico
+    ctf
+    2k19
+    > tr -d “\n”
+    picoctf2k19
+    
+-------------CRACKING THE PASSWD FILE USING THE SHADOW FILE IN 
+LINUX USING JOHN-THE RIPPER
+> First, you need to convert the shadow and passwd file into a form what 
+john could able to read.
+    (unshadow PASSWD_FILE SHADOW_FILE > user.txt)
+> Now using john you could crack the password with the wordlist.
+    (john user.txt or john --wordlist=rockyou.txt user.txt)
+
+----------USING REV AND CUT COMMAND TO MANIPULATE THE TEXT IN
+THE COMMAND LINE
+ > echo “kiss miss” | rev
+    ssim ssik
+ > echo “kiss miss” | cut -d “ ” -f1
+    kiss
+> echo “kiss miss” | cut -d “ ” -f2
+    miss
+    
+----------RECURSIVELY LIST AND SEARCH FILES IN THE DIRECTORIES
+> ls -R
+> grep -R flag.*
+
+---------CAT AND TAC
+> cat reads the file from top to bottom while the ‘tac’ reads file from bottom to top
+
+-----------HEAD AND TAIL FOR CUTTING THE LINES.
+> head -n 20
+- Display first 20 lines
+> tail -n 20
+- Display last 20 lines
+
+----------SIMPLE TRICK TO GET THE FLAG WHEN ITS PROHIBITING YOU
+> Use any cookie manager to edit the cookie
+and change some boolean values.
+> Go to the developer options and go to the network tab to monitor all the requests.
+
+----------ITERATING THROUGH THE VALUE IN THE BASH
+> Using for loop
+    (for i in {1..26} ; do echo ciphertext | caesar $1; done)
+    
+----------SETTING ADMIN COOKIE
+> If theres no admin cookie, then create one using the cookie manager and set values as “admin” and “1”.
+            import requests
+            url = “enter your url”
+            r = requests.get(url, cookies = {'admin' : ‘1’})
+            print(r)
+            
+----------CHANGING USER_AGENT IN CURL        
+> When the page checks for  the user-agent to get access,
+            (curl --user-agent “Enter the user-agent which you get in the google” “Enter the url”)    -- 01:45  in picoCTF-2k19(timestamp)
+
+-----------SOME MINI FORENSICS TOOL LIST
+1. eog
+2. Stegsolve
+3. zsteg
+4. foremost(dd)
+5. Best hex editors
+         1) hexedit
+         2) ghex
+         3) bless
+         4) strings 
+6. exiftool- for metadata
+7. Use gdb-peda to reverse engineer a program
+8. To know whats going in a code after execution, execute 
+           (ltrace ./file_name)
+           
+           
+-----------more on the way........

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Your Book</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Add Your Book to the Shop</h3>
+        <form [formGroup]='bookDetailsData' (ngSubmit)='validate()'>
+            <div class="form-group">
+              <label for="bookId">Book ID</label>
+              <input type="text" formControlName="BookId" class="form-control" id="bookId" placeholder="Enter Book ID">
+            </div>
+            <div class="form-group">
+              <label for="bookName">Book Name</label>
+              <input type="text" formControlName="BookName" class="form-control" id="bookName" placeholder="Enter Book Name">
+            </div>
+            <div class="form-group">
+                <label for="bookName">Book Author Name</label>
+                <input type="text" formControlName="BookAuthor" class="form-control" id="bookAuthor" placeholder="Enter Book Author">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!bookDetailsData.valid">Submit</button>
+          </form>
+    </div>
+      <router-outlet>
+        <app-show-book [newBookChild] = "newBookParent" *ngIf="flag"></app-show-book>
+      </router-outlet>
+</body>
+</html>

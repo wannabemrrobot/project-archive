@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Management</title>
+</head>
+<body>
+  <div class="container">
+
+    <div class="header">
+      <img src="assets\icons\book-icon.png" class="header-icon" alt="">
+      <h1 class="header-title">Welcome to Book Management!</h1>
+    </div>
+
+    <div class="navbar navbar-dark bg-dark justify-content-center row">
+      <a [routerLink]="['']" class="nav-link col-md-4" style="color: white;">Introduction</a>
+      <a [routerLink]="['/AddBook']" class="nav-link col-md-4" style="color: white;">Add Book</a>
+      <a [routerLink]="['/BookList']" class="nav-link" style="color: white;">Book List</a>
+    </div>
+  </div>
+
+  <router-outlet></router-outlet>
+</body>
+</html>

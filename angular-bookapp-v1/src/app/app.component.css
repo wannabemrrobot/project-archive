@@ -1,0 +1,23 @@
+
+.header-container{
+    padding: 10px;
+    margin:0%;
+    border: 3px solid black;
+    border-radius: 10px;
+    display: table-row;
+}
+
+.header-text{
+    display: table-cell;
+}
+
+.header-img{
+    display: table-cell;
+}
+
+.book-icon{
+    margin-left: 580px;
+    padding: 10px;
+    height: 100px;
+    width: 100px;
+}

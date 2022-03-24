@@ -1,0 +1,15 @@
+/* .container{
+    display:inline-block;
+    justify-content: space-around;
+    background-color: black;
+} */
+.courseDetail{
+    margin: 3%;
+    float: left;
+    width: 50%;
+    margin-right: 8px;
+}
+.courseDetailCard{
+    float: left;
+    margin-top: 3%;
+}

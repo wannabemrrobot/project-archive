@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+</head>
+<body>
+    <div class="container">
+        <h3 class="title">Book List</h3>
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Category</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of BookList">
+                    <td>{{book.bookTitle}}</td>
+                    <td>{{book.bookAuthor}}</td>
+                    <td>{{book.bookPrice}}</td>
+                    <td>{{book.bookCategory}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
